@@ -52,13 +52,13 @@
             animation: pop-in-out-right 5s infinite;
         }
         .clown-top-left {
-            top: -104px; /* Positioned off-screen above */
+            top: -204px; /* Positioned further off-screen above */
             left: 10px; /* Move 10 pixels to the right from original */
             transform: rotate(180deg) scaleX(-1); /* Rotate upside down and mirror horizontally */
             animation: pop-down-from-top-left 5s infinite; /* Match speed of bottom clowns */
         }
         .clown-top-right {
-            top: -104px; /* Positioned off-screen above */
+            top: -204px; /* Positioned further off-screen above */
             right: 10px; /* Move 10 pixels to the left from original */
             transform: rotate(180deg); /* Rotate upside down */
             animation: pop-down-from-top-right 5s infinite; /* Match speed of bottom clowns */
@@ -73,12 +73,12 @@
             50% { right: 0; }
         }
         @keyframes pop-down-from-top-left {
-            0%, 100% { top: -104px; } /* Adjusted initial position */
-            50% { top: -54px; } /* Pop down slightly more (1.5 cm total) */
+            0%, 100% { top: -204px; } /* Adjusted to pop out more */
+            50% { top: -104px; } /* Pop down slightly more */
         }
         @keyframes pop-down-from-top-right {
-            0%, 100% { top: -104px; } /* Adjusted initial position */
-            50% { top: -54px; } /* Pop down slightly more (1.5 cm total) */
+            0%, 100% { top: -204px; } /* Adjusted to pop out more */
+            50% { top: -104px; } /* Pop down slightly more */
         }
         iframe {
             width: 80vw;
