@@ -40,25 +40,25 @@
             z-index: 1; /* Ensure they are above other content */
         }
         .clown-left {
-            top: calc(50% + 120px); /* Position just above the video */
+            bottom: 0; /* Positioned at the bottom */
             left: -150px;
-            transform: translateY(-50%) rotate(90deg); /* Rotate to the right */
+            transform: translateY(50%) rotate(90deg); /* Rotate to the right and position */
             animation: pop-in-out-left 5s infinite;
         }
         .clown-right {
-            top: calc(50% + 120px); /* Position just above the video */
+            bottom: 0; /* Positioned at the bottom */
             right: -150px;
-            transform: translateY(-50%) rotate(-90deg); /* Rotate to the left */
+            transform: translateY(50%) rotate(-90deg); /* Rotate to the left and position */
             animation: pop-in-out-right 5s infinite;
         }
         .clown-top-left {
-            top: -104px; /* Positioned off-screen above, slightly higher */
+            top: -104px; /* Positioned off-screen above */
             left: 10px; /* Move 10 pixels to the right from original */
             transform: rotate(180deg) scaleX(-1); /* Rotate upside down and mirror horizontally */
             animation: pop-down-from-top-left 5s infinite; /* Match speed of bottom clowns */
         }
         .clown-top-right {
-            top: -104px; /* Positioned off-screen above, slightly higher */
+            top: -104px; /* Positioned off-screen above */
             right: 10px; /* Move 10 pixels to the left from original */
             transform: rotate(180deg); /* Rotate upside down */
             animation: pop-down-from-top-right 5s infinite; /* Match speed of bottom clowns */
