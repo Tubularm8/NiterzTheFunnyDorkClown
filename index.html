@@ -21,6 +21,7 @@
             font-size: 3rem; 
             font-weight: bold; 
             margin: 20px 0; 
+            position: relative; /* Ensure positioning context for the side images */
         }
         .clown-main {
             max-width: 100%; 
@@ -45,13 +46,14 @@
         }
         .clown-top-left {
             top: -150px;
-            transform: translateX(-50%) rotate(-90deg); /* Rotate to face downward */
+            left: 20%;
+            transform: translateX(-50%) rotate(180deg); /* Rotate upside down */
             animation: pop-down-from-top-left 6s infinite; /* Different duration */
         }
         .clown-top-right {
             top: -150px;
-            right: -150px;
-            transform: translateX(50%) rotate(90deg); /* Rotate to face upward */
+            right: 20%;
+            transform: translateX(50%) rotate(180deg); /* Rotate upside down */
             animation: pop-down-from-top-right 6s infinite; /* Different duration */
             animation-delay: 3s; /* Stagger start */
         }
