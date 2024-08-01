@@ -47,15 +47,15 @@
             animation: pop-in-out-right 5s infinite;
         }
         .clown-top-left {
-            top: -150px;
-            left: 20px; /* Adjusted position to move right */
-            transform: translateX(-50%) rotate(180deg) scaleX(-1); /* Rotate upside down and mirror horizontally */
+            top: calc(10% + 5px); /* Maintain height */
+            left: 10px; /* Move 1 cm (10 pixels) to the right */
+            transform: rotate(180deg) scaleX(-1); /* Rotate upside down and mirror horizontally */
             animation: pop-down-from-top-left 6s infinite; /* Different duration */
         }
         .clown-top-right {
-            top: -150px;
-            right: 30px; /* Adjusted position to move right */
-            transform: translateX(50%) rotate(180deg); /* Rotate upside down */
+            top: calc(10% + 5px); /* Maintain height */
+            right: 10px; /* Move 1 cm (10 pixels) to the left */
+            transform: rotate(180deg); /* Rotate upside down */
             animation: pop-down-from-top-right 6s infinite; /* Different duration */
             animation-delay: 3s; /* Stagger start */
         }
@@ -68,11 +68,11 @@
             50% { right: 0; }
         }
         @keyframes pop-down-from-top-left {
-            0%, 100% { top: -150px; }
+            0%, 100% { top: calc(10% + 5px); }
             50% { top: 0; }
         }
         @keyframes pop-down-from-top-right {
-            0%, 100% { top: -150px; }
+            0%, 100% { top: calc(10% + 5px); }
             50% { top: 0; }
         }
         iframe {
