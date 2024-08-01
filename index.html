@@ -8,101 +8,104 @@
         body { 
             display: flex; 
             flex-direction: column; 
-            justify-content: center; 
             align-items: center; 
-            height: 100vh; 
             margin: 0; 
             font-family: Arial, sans-serif;
             background-color: #2f3136; 
             color: #ffffff; 
             text-align: center; 
-            overflow: hidden; /* Prevents scrolling */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-y: auto; /* Allow vertical scroll */
         }
         h1 {
             font-size: 3rem; 
             font-weight: bold; 
-            margin-bottom: 20px; 
-            position: relative;
-            z-index: 1; /* Ensures text is above the clowns */
+            margin: 20px 0; 
+            position: relative; /* Ensure positioning context for the side images */
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* Add a text shadow for better readability */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        img { 
+        .clown-main {
             max-width: 100%; 
             height: auto; 
-            margin-bottom: 20px; 
+            margin: 20px 0; 
+            position: relative; /* Required for image map */
+        }
+        .clown-left, .clown-right, .clown-top-left, .clown-top-right {
+            position: fixed;
+            width: 150px;
+            height: auto;
+            z-index: 1; /* Ensure they are above other content */
+        }
+        .clown-left {
+            bottom: 1.5cm; /* Moved 2 cm lower from the original position */
+            left: -150px;
+            transform: translateY(50%) rotate(90deg) scaleX(-1); /* Mirror horizontally and rotate */
+            animation: pop-in-out-left 5s infinite;
+        }
+        .clown-right {
+            bottom: 1.5cm; /* Moved 2 cm lower from the original position */
+            right: -150px;
+            transform: translateY(50%) rotate(-90deg); /* Rotate to the left and position */
+            animation: pop-in-out-right 5s infinite;
+        }
+        .clown-top-left {
+            top: -150px; /* Adjusted for proper visibility */
+            left: 10px; /* Move 10 pixels to the right from original */
+            transform: rotate(180deg) scaleX(-1); /* Rotate upside down and mirror horizontally */
+            animation: pop-down-from-top-left 5s infinite; /* Match speed of bottom clowns */
+        }
+        .clown-top-right {
+            top: -150px; /* Adjusted for proper visibility */
+            right: 10px; /* Move 10 pixels to the left from original */
+            transform: rotate(180deg); /* Rotate upside down */
+            animation: pop-down-from-top-right 5s infinite; /* Match speed of bottom clowns */
+            animation-delay: 2.5s; /* Stagger start */
+        }
+        @keyframes pop-in-out-left {
+            0%, 100% { left: -150px; }
+            50% { left: 0; }
+        }
+        @keyframes pop-in-out-right {
+            0%, 100% { right: -150px; }
+            50% { right: 0; }
+        }
+        @keyframes pop-down-from-top-left {
+            0%, 100% { top: -150px; } /* Off-screen */
+            50% { top: 0; } /* Pop down to fully visible */
+        }
+        @keyframes pop-down-from-top-right {
+            0%, 100% { top: -150px; } /* Off-screen */
+            50% { top: 0; } /* Pop down to fully visible */
         }
         iframe {
-            max-width: 100%; 
-            height: 315px; 
+            width: 80vw;
+            height: 80vw;
+            max-height: 80vh;
             border: none; 
+            margin-bottom: 20px;
         }
         audio {
-            margin-top: 20px; 
-        }
-        .clown {
-            position: absolute;
-            width: 100px;
-            height: auto;
-            z-index: 0; /* Ensures clowns are behind other elements */
-        }
-        .clown.top-left {
-            top: 20px;
-            left: 10%;
-            transform: rotate(180deg); /* Rotated image */
-        }
-        .clown.top-right {
-            top: 20px;
-            right: 10%;
-            transform: rotate(0deg); /* Original image */
-        }
-        .clown.bottom-left {
-            bottom: 20px;
-            left: 10%;
-            transform: rotate(0deg); /* Original image */
-        }
-        .clown.bottom-right {
-            bottom: 20px;
-            right: 10%;
-            transform: rotate(180deg); /* Rotated image */
-        }
-        @keyframes clownInOut {
-            0% { transform: translateY(-100%); }
-            50% { transform: translateY(0); }
-            100% { transform: translateY(-100%); }
-        }
-        .clown.top-left {
-            animation: clownInOut 4s infinite;
-        }
-        .clown.top-right {
-            animation: clownInOut 4s infinite;
-            animation-delay: 2s;
-        }
-        .clown.bottom-left {
-            animation: clownInOut 4s infinite;
-            animation-delay: 1s;
-        }
-        .clown.bottom-right {
-            animation: clownInOut 4s infinite;
-            animation-delay: 3s;
+            margin: 20px 0; 
         }
     </style>
 </head>
 <body>
     <h1>Niterz The Funny Clown!</h1>
-    <!-- Add the image with usemap -->
-    <img src="retard%20clown.png" alt="Niterz The Funny Clown" usemap="#clownmap">
-    <!-- Define the image map -->
-    <map name="clownmap">
-        <!-- Define the clickable area with the provided coordinates -->
-        <area shape="rect" coords="54,145,77,168" href="https://github.com/Tubularm8/NiterzTheFunnyDorkClown/blob/main/obama.JPG?raw=true" alt="Clickable Area">
-    </map>
-    <!-- Clowns on the page -->
-    <img src="retard%20clown.png" class="clown top-left" alt="Clown Top Left">
-    <img src="retard%20clown.png" class="clown top-right" alt="Clown Top Right">
-    <img src="retard%20clown.png" class="clown bottom-left" alt="Clown Bottom Left">
-    <img src="retard%20clown.png" class="clown bottom-right" alt="Clown Bottom Right">
+    <!-- Main clown image with a clickable area -->
+    <a href="https://github.com/Tubularm8/NiterzTheFunnyDorkClown/blob/main/obama.JPG?raw=true" target="_blank">
+        <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-main">
+    </a>
+    <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-left">
+    <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-right">
+    <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-top-left">
+    <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-top-right">
     <iframe src="https://www.youtube.com/embed/74K5EUtOMrw" title="Niterz The Funny Clown Video" allowfullscreen></iframe>
     <audio controls autoplay>
-        <source src="CircusTheme%20Song.mp3" type="audio/mpeg">
+        <source src="CircusTheme Song.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 </body>
