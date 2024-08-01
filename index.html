@@ -41,9 +41,17 @@
     <iframe src="https://www.youtube.com/embed/74K5EUtOMrw" 
             title="Niterz The Funny Clown Video" 
             allowfullscreen></iframe>
-    <audio controls autoplay>
+    <audio id="clownMusic" controls>
         <source src="y2mate.com - Circus Theme Song.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('clownMusic');
+            audio.play().catch(function(error) {
+                console.log('Autoplay prevented or failed:', error);
+            });
+        };
+    </script>
 </body>
 </html>
