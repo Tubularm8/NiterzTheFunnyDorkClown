@@ -32,6 +32,7 @@
             position: relative; /* Needed for positioning the text and arrow */
             display: flex;
             align-items: center;
+            margin-bottom: 20px; /* Add some margin to create space */
         }
         .clown-main {
             max-width: 100%; 
@@ -97,14 +98,15 @@
         }
         .text-arrow {
             position: absolute;
-            left: -200px; /* Position the text and arrow to the left of the clown image */
+            left: 20px; /* Adjusted to align with the clown picture */
             color: pink;
             font-size: 1.5rem;
             display: flex;
             align-items: center;
+            margin-top: 10px; /* Adjust margin to position text and arrow */
         }
         .text-arrow::before {
-            content: "←";
+            content: "→"; /* Changed arrow direction */
             font-size: 2rem;
             margin-right: 10px;
         }
