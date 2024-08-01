@@ -40,13 +40,13 @@
             z-index: 1; /* Ensure they are above other content */
         }
         .clown-left {
-            bottom: 0; /* Positioned at the bottom */
+            bottom: 2.5cm; /* Position 2.5 cm up from the bottom */
             left: -150px;
-            transform: translateY(50%) rotate(90deg); /* Rotate to the right and position */
+            transform: translateY(50%) rotate(90deg) scaleX(-1); /* Mirror horizontally and rotate */
             animation: pop-in-out-left 5s infinite;
         }
         .clown-right {
-            bottom: 0; /* Positioned at the bottom */
+            bottom: 2.5cm; /* Position 2.5 cm up from the bottom */
             right: -150px;
             transform: translateY(50%) rotate(-90deg); /* Rotate to the left and position */
             animation: pop-in-out-right 5s infinite;
@@ -74,11 +74,11 @@
         }
         @keyframes pop-down-from-top-left {
             0%, 100% { top: -104px; } /* Adjusted initial position */
-            50% { top: -24px; } /* Pop down slightly more (1.5 cm total) */
+            50% { top: -14px; } /* Pop down slightly more (1.5 cm total) */
         }
         @keyframes pop-down-from-top-right {
             0%, 100% { top: -104px; } /* Adjusted initial position */
-            50% { top: -24px; } /* Pop down slightly more (1.5 cm total) */
+            50% { top: -14px; } /* Pop down slightly more (1.5 cm total) */
         }
         iframe {
             width: 80vw;
