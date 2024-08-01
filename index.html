@@ -98,17 +98,18 @@
         }
         .text-arrow {
             position: absolute;
-            left: 20px; /* Adjusted to align with the clown picture */
+            left: -200px; /* Position the text and arrow to the left of the clown image */
             color: pink;
             font-size: 1.5rem;
             display: flex;
             align-items: center;
-            margin-top: 10px; /* Adjust margin to position text and arrow */
+            margin-top: 100px; /* Adjust margin to position text and arrow */
+            transform: translateY(50%); /* Center vertically relative to the clown image */
         }
         .text-arrow::before {
             content: "→"; /* Changed arrow direction */
             font-size: 2rem;
-            margin-right: 10px;
+            margin-left: 10px; /* Space between text and arrow */
         }
     </style>
 </head>
