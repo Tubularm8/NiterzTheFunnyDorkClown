@@ -16,11 +16,14 @@
             background-color: #2f3136; 
             color: #ffffff; 
             text-align: center; 
+            overflow: hidden; /* Prevents scrolling */
         }
         h1 {
             font-size: 3rem; 
             font-weight: bold; 
             margin-bottom: 20px; 
+            position: relative;
+            z-index: 1; /* Ensures text is above the clowns */
         }
         img { 
             max-width: 100%; 
@@ -35,6 +38,52 @@
         audio {
             margin-top: 20px; 
         }
+        .clown {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            z-index: 0; /* Ensures clowns are behind other elements */
+        }
+        .clown.top-left {
+            top: 20px;
+            left: 10%;
+            transform: rotate(180deg); /* Rotated image */
+        }
+        .clown.top-right {
+            top: 20px;
+            right: 10%;
+            transform: rotate(0deg); /* Original image */
+        }
+        .clown.bottom-left {
+            bottom: 20px;
+            left: 10%;
+            transform: rotate(0deg); /* Original image */
+        }
+        .clown.bottom-right {
+            bottom: 20px;
+            right: 10%;
+            transform: rotate(180deg); /* Rotated image */
+        }
+        @keyframes clownInOut {
+            0% { transform: translateY(-100%); }
+            50% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+        .clown.top-left {
+            animation: clownInOut 4s infinite;
+        }
+        .clown.top-right {
+            animation: clownInOut 4s infinite;
+            animation-delay: 2s;
+        }
+        .clown.bottom-left {
+            animation: clownInOut 4s infinite;
+            animation-delay: 1s;
+        }
+        .clown.bottom-right {
+            animation: clownInOut 4s infinite;
+            animation-delay: 3s;
+        }
     </style>
 </head>
 <body>
@@ -46,6 +95,11 @@
         <!-- Define the clickable area with the provided coordinates -->
         <area shape="rect" coords="54,145,77,168" href="https://github.com/Tubularm8/NiterzTheFunnyDorkClown/blob/main/obama.JPG?raw=true" alt="Clickable Area">
     </map>
+    <!-- Clowns on the page -->
+    <img src="retard%20clown.png" class="clown top-left" alt="Clown Top Left">
+    <img src="retard%20clown.png" class="clown top-right" alt="Clown Top Right">
+    <img src="retard%20clown.png" class="clown bottom-left" alt="Clown Bottom Left">
+    <img src="retard%20clown.png" class="clown bottom-right" alt="Clown Bottom Right">
     <iframe src="https://www.youtube.com/embed/74K5EUtOMrw" title="Niterz The Funny Clown Video" allowfullscreen></iframe>
     <audio controls autoplay>
         <source src="CircusTheme%20Song.mp3" type="audio/mpeg">
