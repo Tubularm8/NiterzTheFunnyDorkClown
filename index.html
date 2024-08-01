@@ -28,11 +28,15 @@
             /* Add a text shadow for better readability */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
+        .clown-container {
+            position: relative; /* Needed for positioning the text and arrow */
+            display: flex;
+            align-items: center;
+        }
         .clown-main {
             max-width: 100%; 
             height: auto; 
             margin: 20px 0; 
-            position: relative; /* Required for image map */
         }
         .clown-left, .clown-right, .clown-top-left, .clown-top-right {
             position: fixed;
@@ -91,14 +95,31 @@
         audio {
             margin: 20px 0; 
         }
+        .text-arrow {
+            position: absolute;
+            left: -200px; /* Position the text and arrow to the left of the clown image */
+            color: pink;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .text-arrow::before {
+            content: "←";
+            font-size: 2rem;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
     <h1>Niterz The Funny Clown!</h1>
-    <!-- Main clown image with a clickable area -->
-    <a href="https://github.com/Tubularm8/NiterzTheFunnyDorkClown/blob/main/obama.JPG?raw=true" target="_blank">
-        <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-main">
-    </a>
+    <div class="clown-container">
+        <!-- Main clown image with a clickable area -->
+        <a href="https://github.com/Tubularm8/NiterzTheFunnyDorkClown/blob/main/obama.JPG?raw=true" target="_blank">
+            <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-main">
+        </a>
+        <!-- Text and arrow pointing to the clickable image -->
+        <div class="text-arrow">Click my nose</div>
+    </div>
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-left">
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-right">
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-top-left">
