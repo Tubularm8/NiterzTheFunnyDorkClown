@@ -22,6 +22,9 @@
             font-weight: bold; 
             margin: 20px 0; 
             position: relative; /* Ensure positioning context for the side images */
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .clown-main {
             max-width: 100%; 
@@ -48,13 +51,13 @@
         }
         .clown-top-left {
             top: calc(10% + 5px); /* Maintain height */
-            left: 10px; /* Move 1 cm (10 pixels) to the right */
+            left: 10px; /* Move 10 pixels to the right from original */
             transform: rotate(180deg) scaleX(-1); /* Rotate upside down and mirror horizontally */
             animation: pop-down-from-top-left 6s infinite; /* Different duration */
         }
         .clown-top-right {
             top: calc(10% + 5px); /* Maintain height */
-            right: 10px; /* Move 1 cm (10 pixels) to the left */
+            right: 10px; /* Move 10 pixels to the left from original */
             transform: rotate(180deg); /* Rotate upside down */
             animation: pop-down-from-top-right 6s infinite; /* Different duration */
             animation-delay: 3s; /* Stagger start */
