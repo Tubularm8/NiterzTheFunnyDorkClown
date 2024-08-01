@@ -17,21 +17,30 @@
             color: #ffffff; /* White text */
             text-align: center;
         }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
         h1 {
             margin-bottom: 20px;
         }
-        audio {
+        .bottom {
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        iframe {
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Niterz The Funny Clown</h1>
-    <img src="retard clown.png" alt="Niterz The Funny Clown">
-    <audio controls autoplay>
-        <source src="CircusTheme%20Song.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/74K5EUtOMrw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</body>
-</html>
+    <div class="content">
+        <h1>Niterz The Funny Clown</h1>
+        <img src="retard%20clown.png" alt="Niterz The Funny Clown">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/74K5EUtOMrw" frameborder="0"
