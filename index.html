@@ -36,11 +36,12 @@
         }
         .clown-left {
             left: -150px;
+            transform: translateY(-50%) rotate(90deg); /* Rotate to the right */
             animation: pop-in-out-left 5s infinite;
         }
         .clown-right {
             right: -150px;
-            transform: translateY(-50%) rotate(180deg); /* Rotate for mirroring effect */
+            transform: translateY(-50%) rotate(-90deg); /* Rotate to the left */
             animation: pop-in-out-right 5s infinite;
         }
         @keyframes pop-in-out-left {
