@@ -52,17 +52,17 @@
             animation: pop-in-out-right 5s infinite;
         }
         .clown-top-left {
-            top: -110px; /* Positioned off-screen above */
+            top: -104px; /* Positioned off-screen above, slightly higher */
             left: 10px; /* Move 10 pixels to the right from original */
             transform: rotate(180deg) scaleX(-1); /* Rotate upside down and mirror horizontally */
-            animation: pop-down-from-top-left 6s infinite; /* Different duration */
+            animation: pop-down-from-top-left 5s infinite; /* Match speed of bottom clowns */
         }
         .clown-top-right {
-            top: -110px; /* Positioned off-screen above */
+            top: -104px; /* Positioned off-screen above, slightly higher */
             right: 10px; /* Move 10 pixels to the left from original */
             transform: rotate(180deg); /* Rotate upside down */
-            animation: pop-down-from-top-right 6s infinite; /* Different duration */
-            animation-delay: 3s; /* Stagger start */
+            animation: pop-down-from-top-right 5s infinite; /* Match speed of bottom clowns */
+            animation-delay: 2.5s; /* Stagger start */
         }
         @keyframes pop-in-out-left {
             0%, 100% { left: -150px; }
@@ -73,12 +73,12 @@
             50% { right: 0; }
         }
         @keyframes pop-down-from-top-left {
-            0%, 100% { top: -110px; } /* Adjusted initial position */
-            50% { top: -29px; } /* Pop down slightly more (1 cm) */
+            0%, 100% { top: -104px; } /* Adjusted initial position */
+            50% { top: -24px; } /* Pop down slightly more (1.5 cm total) */
         }
         @keyframes pop-down-from-top-right {
-            0%, 100% { top: -110px; } /* Adjusted initial position */
-            50% { top: -29px; } /* Pop down slightly more (1 cm) */
+            0%, 100% { top: -104px; } /* Adjusted initial position */
+            50% { top: -24px; } /* Pop down slightly more (1.5 cm total) */
         }
         iframe {
             width: 80vw;
