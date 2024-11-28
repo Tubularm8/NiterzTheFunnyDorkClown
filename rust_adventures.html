@@ -32,6 +32,28 @@
         .back-to-home:hover {
             background-color: #555;
         }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .image {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+        }
+        iframe {
+            width: 80vw;
+            height: 80vw;
+            max-height: 80vh;
+            border: none;
+            margin-bottom: 20px;
+        }
+        audio {
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -39,7 +61,7 @@
     <!-- Box with link to go back to the home page -->
     <a href="index.html" class="back-to-home">Back to Dork Home Page</a>
 
-    <!-- Your existing content (keeping it the same as before) -->
+    <!-- The image and video content (restored) -->
     <h1>Rust Adventures!</h1>
     <div class="image-container">
         <img src="comic front.png" alt="Rust Adventures" class="image">
