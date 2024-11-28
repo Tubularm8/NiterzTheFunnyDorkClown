@@ -122,6 +122,21 @@
         .arrow-box-container span {
             font-size: 1.5rem;
         }
+        .text-arrow {
+            position: absolute;
+            left: -200px; /* Position the text and arrow to the left of the clown image */
+            color: pink;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            margin-top: 20px; /* Adjust margin to position text and arrow */
+            transform: translateY(5%); /* Move down slightly */
+        }
+        .text-arrow::after {
+            content: "→"; /* Arrow direction */
+            font-size: 2rem;
+            margin-left: 10px; /* Space between text and arrow */
+        }
     </style>
 </head>
 <body>
