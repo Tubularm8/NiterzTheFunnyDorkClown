@@ -96,21 +96,6 @@
         audio {
             margin: 20px 0; 
         }
-        .text-arrow {
-            position: absolute;
-            left: -200px; /* Position the text and arrow to the left of the clown image */
-            color: pink;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            margin-top: 20px; /* Adjust margin to position text and arrow */
-            transform: translateY(5%); /* Move down slightly */
-        }
-        .text-arrow::after {
-            content: "→"; /* Arrow direction */
-            font-size: 2rem;
-            margin-left: 10px; /* Space between text and arrow */
-        }
         .text-box {
             margin-left: 20px; /* Space between the image and the box */
             padding: 20px; /* Add padding inside the box */
@@ -121,20 +106,21 @@
             font-size: 1.5rem; /* Adjust font size */
             text-align: center; /* Center the text inside the box */
             max-width: 200px; /* Limit the box width */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
-        .arrow-box {
+        .arrow-box-container {
             display: flex;
             align-items: center;
+            margin-left: 20px;
             color: pink;
             font-size: 1.5rem;
         }
-        .arrow-box::before {
+        .arrow-box-container::before {
             content: "←"; /* Arrow direction */
             font-size: 2rem;
             margin-right: 10px; /* Space between arrow and text */
+        }
+        .arrow-box-container span {
+            font-size: 1.5rem;
         }
     </style>
 </head>
@@ -147,12 +133,13 @@
         </a>
         <!-- Text and arrow pointing to the clickable image -->
         <div class="text-arrow">Click my nose</div>
-        <!-- New box for "Rust Adventures!" with arrow and text -->
+        <!-- Box for "Rust Adventures!" -->
         <div class="text-box">
             Rust Adventures!
-            <div class="arrow-box">
-                <span>Click here!</span>
-            </div>
+        </div>
+        <!-- Arrow and text outside the black box -->
+        <div class="arrow-box-container">
+            <span>Click here!</span>
         </div>
     </div>
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-left">
