@@ -121,6 +121,20 @@
             font-size: 1.5rem; /* Adjust font size */
             text-align: center; /* Center the text inside the box */
             max-width: 200px; /* Limit the box width */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .arrow-box {
+            display: flex;
+            align-items: center;
+            color: pink;
+            font-size: 1.5rem;
+        }
+        .arrow-box::before {
+            content: "←"; /* Arrow direction */
+            font-size: 2rem;
+            margin-right: 10px; /* Space between arrow and text */
         }
     </style>
 </head>
@@ -133,9 +147,12 @@
         </a>
         <!-- Text and arrow pointing to the clickable image -->
         <div class="text-arrow">Click my nose</div>
-        <!-- New box for "Rust Adventures!" -->
+        <!-- New box for "Rust Adventures!" with arrow and text -->
         <div class="text-box">
             Rust Adventures!
+            <div class="arrow-box">
+                <span>Click here!</span>
+            </div>
         </div>
     </div>
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-left">
