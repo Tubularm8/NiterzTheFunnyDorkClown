@@ -33,7 +33,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 20px; /* Add some margin to create space */
-            transform: translateX(10%); /* Move the container with text and arrows 10% to the right */
         }
         .clown-main {
             max-width: 100%; 
@@ -97,32 +96,6 @@
         audio {
             margin: 20px 0; 
         }
-        .text-box {
-            margin-left: 20px; /* Space between the image and the box */
-            padding: 20px; /* Add padding inside the box */
-            border: 2px solid white; /* Add a white border */
-            border-radius: 10px; /* Rounded corners */
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-            color: white; /* White text */
-            font-size: 1.5rem; /* Adjust font size */
-            text-align: center; /* Center the text inside the box */
-            max-width: 200px; /* Limit the box width */
-        }
-        .arrow-box-container {
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
-            color: pink;
-            font-size: 1.5rem;
-        }
-        .arrow-box-container::before {
-            content: "←"; /* Arrow direction */
-            font-size: 2rem;
-            margin-right: 10px; /* Space between arrow and text */
-        }
-        .arrow-box-container span {
-            font-size: 1.5rem;
-        }
         .text-arrow {
             position: absolute;
             left: -200px; /* Position the text and arrow to the left of the clown image */
@@ -138,6 +111,36 @@
             font-size: 2rem;
             margin-left: 10px; /* Space between text and arrow */
         }
+        /* New Box Styling */
+        .text-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .text-box {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .arrow-container {
+            display: flex;
+            align-items: center;
+        }
+        .arrow-container .text-arrow {
+            position: relative;
+            left: auto;
+            right: 0;
+            margin-left: 10px;
+            color: pink;
+        }
+        /* Make the Rust Adventures box clickable */
+        .clickable-box {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -149,19 +152,23 @@
         </a>
         <!-- Text and arrow pointing to the clickable image -->
         <div class="text-arrow">Click my nose</div>
-        <!-- Box for "Rust Adventures!" -->
-        <div class="text-box">
-            Rust Adventures!
-        </div>
-        <!-- Arrow and text outside the black box -->
-        <div class="arrow-box-container">
-            <span>Click here!</span>
-        </div>
     </div>
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-left">
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-right">
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-top-left">
     <img src="retard clown.png" alt="Niterz The Funny Clown" class="clown-top-right">
+    
+    <!-- Rust Adventures Box with a clickable link -->
+    <a href="rust_adventures.html" class="clickable-box">
+        <div class="text-box-container">
+            <div class="text-box">Rust Adventures!</div>
+            <div class="arrow-container">
+                <div class="text-arrow">←</div>
+                <div class="text-arrow">Click here!</div>
+            </div>
+        </div>
+    </a>
+    
     <iframe src="https://www.youtube.com/embed/74K5EUtOMrw" title="Niterz The Funny Clown Video" allowfullscreen></iframe>
     <audio controls autoplay>
         <source src="CircusTheme Song.mp3" type="audio/mpeg">
