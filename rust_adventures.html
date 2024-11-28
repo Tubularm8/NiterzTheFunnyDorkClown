@@ -11,7 +11,8 @@
             align-items: center;
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #4caf50, #2e7d32); /* Green gradient background */
+            background: url('green_trees.jpg') no-repeat center center fixed; /* Background is fixed */
+            background-size: cover; /* Ensures the image covers the whole background */
             color: #ffffff;
             text-align: center;
             overflow-x: hidden;
@@ -27,15 +28,34 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        img {
-            max-width: 100%;
+        .main-container {
+            position: relative;
+            width: 100%;
             height: auto;
-            margin-bottom: 20px;
+            max-width: 100%;
+        }
+        .main-image {
+            width: 100%;
+            height: auto;
+        }
+        .trees-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50%; /* Takes up the bottom half of the page */
+            background: url('trees_image.png') no-repeat center center;
+            background-size: cover; /* Makes the tree image cover the bottom half */
+            opacity: 0.8; /* Optional: for slightly transparent trees */
         }
     </style>
 </head>
 <body>
     <h1>Rust Adventures</h1>
-    <img src="comic front.png" alt="Comic Front">
+    <div class="main-container">
+        <!-- Main comic front image -->
+        <img src="comic front.png" alt="Comic Front" class="main-image">
+        <!-- Trees overlay on the bottom half -->
+        <div class="trees-overlay"></div>
+    </div>
 </body>
 </html>
