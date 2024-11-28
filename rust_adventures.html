@@ -41,9 +41,28 @@
             height: 50%; /* Cover the bottom half of the screen */
             background: linear-gradient(to bottom, transparent, rgba(34, 139, 34, 0.8) 50%, rgba(0, 0, 0, 0.7) 100%);
         }
+
+        /* Style for the back button box */
+        .back-box {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #333333;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #ffffff;
+        }
+
+        .back-box:hover {
+            background-color: #444444;
+        }
     </style>
 </head>
 <body>
+    <a href="index.html" class="back-box">Back to Dork Home Page</a>
     <h1>Rust Adventures</h1>
     <div class="main-container">
         <!-- Trees overlay at the bottom using CSS gradient -->
