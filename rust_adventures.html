@@ -77,22 +77,20 @@
 
         .left-image {
             position: absolute;
-            left: 25px;
+            left: 37px; /* Move it 1 cm to the right */
             top: 50%;
             transform: translateY(-50%);
-            width: 16%;
+            width: 26%; /* 10% bigger than before */
             height: auto;
-            cursor: pointer;
         }
 
         .click-text {
             position: absolute;
-            left: 25px;
-            top: 60%;
-            font-size: 1.2rem;
+            left: 37px; /* Align text with image */
+            top: 60%; /* Below the image */
+            font-size: 1rem;
             color: white;
             font-weight: bold;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -110,9 +108,8 @@
         <img src="The Adventures of a Dumb Nigger in Rust Manga.png" class="left-image" alt="Rust Manga">
     </a>
     
-    <!-- Click here text under the image -->
     <div class="click-text">
-        Click Here!
+        Click here
     </div>
     
     <div class="main-container">
