@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounga's Room</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            background-color: #1a1a1a; /* Dark background for the room */
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .back-box {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #333333;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #ffffff;
+        }
+
+        .back-box:hover {
+            background-color: #444444;
+        }
+
+        .content-container {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .room-image {
+            width: 100%;
+            max-width: 800px; /* Make sure it's not too wide */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .room-description {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333333;
+            padding: 10px 0;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-box">Back to Dork Home Page</a>
+    <h1>Bounga's Room</h1>
+
+    <div class="content-container">
+        <!-- Room description text -->
+        <div class="room-description">
+            <p>Welcome to Bounga's Room! This is where all the magic happens. Explore the space, find surprises, and enjoy the experience.</p>
+        </div>
+        
+        <!-- Add image below the description with clickable area -->
+        <img src="boungas_room.png" usemap="#room-map" alt="Bounga's Room" class="room-image">
+        <map name="room-map">
+            <area shape="rect" coords="300,214,350,264" href="obama.JPG" alt="Clickable Area" title="Click here">
+        </map>
+    </div>
+
+    <footer>
+        <p>© 2024 Bounga's Room. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
 
