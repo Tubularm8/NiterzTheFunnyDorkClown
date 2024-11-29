@@ -25,7 +25,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
-        /* Style for the navigation box (Back to Dork Home Page) */
         .back-box {
             position: absolute;
             top: 20px;
@@ -43,7 +42,6 @@
             background-color: #444444;
         }
 
-        /* Main content area */
         .content-container {
             width: 100%;
             padding: 20px;
@@ -56,7 +54,6 @@
             margin-bottom: 20px;
         }
 
-        /* Text box for room description */
         .room-description {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
@@ -67,7 +64,6 @@
             margin: 0 auto;
         }
 
-        /* Footer area */
         footer {
             position: fixed;
             bottom: 0;
@@ -89,8 +85,14 @@
             <p>Welcome to Bounga's Room! This is where all the magic happens. Explore the space, find surprises, and enjoy the experience.</p>
         </div>
         
-        <!-- Add image below the description -->
-        <img src="bounga's room.png" alt="Bounga's Room" class="room-image">
+        <!-- Add image with clickable area -->
+        <img src="bounga's room.png" alt="Bounga's Room" usemap="#room-map" class="room-image">
+        
+        <!-- Define clickable areas -->
+        <map name="room-map">
+            <!-- Example clickable area (Adjust coords to fit the part you want) -->
+            <area shape="rect" coords="50,50,200,200" href="https://example.com" alt="Clickable Area" title="Click here">
+        </map>
     </div>
 
     <!-- Footer (optional) -->
