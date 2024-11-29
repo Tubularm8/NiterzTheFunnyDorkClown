@@ -27,22 +27,20 @@
         .main-container {
             position: relative;
             width: 100%;
-            height: 97.5vh; /* Increased height by 15% more (total 15% increase from 75vh) */
+            height: 97.5vh;
             background: url('comic front.png') no-repeat center center;
-            background-size: contain; /* Ensure the whole image fits */
-            background-position: center bottom; /* Center the image to the bottom */
+            background-size: contain;
+            background-position: center bottom;
         }
 
-        /* Simulated tree gradient */
         .trees-overlay {
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 50%; /* Cover the bottom half of the screen */
+            height: 50%;
             background: linear-gradient(to bottom, transparent, rgba(34, 139, 34, 0.8) 50%, rgba(0, 0, 0, 0.7) 100%);
         }
 
-        /* Style for the back button box */
         .back-box {
             position: absolute;
             top: 20px;
@@ -60,7 +58,6 @@
             background-color: #444444;
         }
 
-        /* Style for the Bounga's Room box */
         .bounga-box {
             position: absolute;
             top: 20px;
@@ -78,21 +75,19 @@
             background-color: #444444;
         }
 
-        /* Style for the new image on the left side */
         .left-image {
             position: absolute;
-            left: 25px; /* Moved 5 cm (approx 5%) to the right */
+            left: 25px;
             top: 50%;
             transform: translateY(-50%);
-            width: 16%; /* 60% smaller again (16% of the original size) */
+            width: 16%;
             height: auto;
         }
 
-        /* Style for the text below the image */
         .click-text {
             position: absolute;
-            left: 25px; /* Same as the image */
-            top: 60%; /* Placed below the image */
+            left: 25px;
+            top: 60%;
             font-size: 1rem;
             color: white;
             font-weight: bold;
@@ -104,22 +99,18 @@
     <a href="Bounga's_Room.html" class="bounga-box">Bounga's Room</a>
     <h1>Rust Adventures</h1>
     
-    <!-- Image added to the left side and made clickable -->
     <a href="manga.html">
         <img src="The Adventures of a Dumb Nigger in Rust Manga.png" class="left-image" alt="Rust Manga">
     </a>
     
-    <!-- Text below the image -->
     <div class="click-text">
         Click here
     </div>
     
     <div class="main-container">
-        <!-- Trees overlay at the bottom using CSS gradient -->
         <div class="trees-overlay"></div>
     </div>
     
-    <!-- Auto-playing music -->
     <audio controls autoplay>
         <source src="CircusTheme Song.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
