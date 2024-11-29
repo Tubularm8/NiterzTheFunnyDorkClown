@@ -77,21 +77,26 @@
 
         .left-image {
             position: absolute;
-            left: 37px; /* Move it 1 cm to the right */
+            left: 25px;
             top: 50%;
             transform: translateY(-50%);
-            width: 26%; /* 10% bigger than before */
+            width: 25%;
             height: auto;
+            cursor: pointer;
         }
 
         .click-text {
             position: absolute;
-            left: 70px; /* Move text 3 cm to the right */
-            top: 70%; /* Below the image */
-            font-size: 3rem; /* Make the text large */
-            font-weight: bold;
+            left: 32%;
+            top: 60%;
+            font-size: 2rem;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .click-text:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -99,7 +104,7 @@
     <!-- Back to Dork Home Page link -->
     <a href="index.html" class="back-box">Back to Dork Home Page</a>
     
-    <!-- Bounga's Room link (fixed to correct file name) -->
+    <!-- Bounga's Room link -->
     <a href="Boungas_Room.html" class="bounga-box">Bounga's Room</a>
     
     <h1>Rust Adventures</h1>
@@ -109,10 +114,11 @@
         <img src="The Adventures of a Dumb Nigger in Rust Manga.png" class="left-image" alt="Rust Manga">
     </a>
     
-    <div class="click-text">
+    <!-- Click Here Text below the image -->
+    <div class="click-text" onclick="window.location='manga.html';">
         Click Here!
     </div>
-    
+
     <div class="main-container">
         <div class="trees-overlay"></div>
     </div>
