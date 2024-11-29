@@ -81,11 +81,21 @@
         /* Style for the new image on the left side */
         .left-image {
             position: absolute;
-            left: 20px;
+            left: 25px; /* Moved 5 cm (approx 5%) to the right */
             top: 50%;
             transform: translateY(-50%);
             width: 16%; /* 60% smaller again (16% of the original size) */
             height: auto;
+        }
+
+        /* Style for the text below the image */
+        .click-text {
+            position: absolute;
+            left: 25px; /* Same as the image */
+            top: 60%; /* Placed below the image */
+            font-size: 1rem;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -94,8 +104,15 @@
     <a href="Bounga's_Room.html" class="bounga-box">Bounga's Room</a>
     <h1>Rust Adventures</h1>
     
-    <!-- Image added to the left side -->
-    <img src="The Adventures of a Dumb Nigger in Rust Manga.png" class="left-image" alt="Rust Manga">
+    <!-- Image added to the left side and made clickable -->
+    <a href="manga.html">
+        <img src="The Adventures of a Dumb Nigger in Rust Manga.png" class="left-image" alt="Rust Manga">
+    </a>
+    
+    <!-- Text below the image -->
+    <div class="click-text">
+        Click here
+    </div>
     
     <div class="main-container">
         <!-- Trees overlay at the bottom using CSS gradient -->
