@@ -39,6 +39,7 @@
             width: 100%;
             height: 50%;
             background: linear-gradient(to bottom, transparent, rgba(34, 139, 34, 0.8) 50%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: 1;
         }
 
         .back-box {
@@ -87,12 +88,13 @@
         .click-text {
             position: absolute;
             left: 70px; /* Move text 3 cm to the right */
-            top: 65%; /* Move the text 2 cm up */
+            top: 60%; /* Move the text up */
             font-size: 3rem; /* Make the text large */
             font-weight: bold;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             cursor: pointer;
+            z-index: 2; /* Ensure it is above the trees */
         }
 
         .click-text:hover {
